@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Images/Live2D.png</file>
+        <file>Images/login_setting.png</file>
+        <file>Images/login_min.png</file>
+        <file>Images/login_close.png</file>
+        <file>c5a4bc4ceb87c8474fc12b35e58f7f7d.jpg</file>
+        <file>Images/ChMkJlwjWC2IL_xNABSi2nGf5toAAuAJwBcvSoAFKLy959.jpg</file>
+    </qresource>
+</RCC>
