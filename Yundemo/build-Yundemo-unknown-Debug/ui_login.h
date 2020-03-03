@@ -56,6 +56,22 @@ public:
     QSpacerItem *horizontalSpacer_2;
     QWidget *reg_page;
     QWidget *set_page;
+    QWidget *widget_5;
+    QHBoxLayout *horizontalLayout_3;
+    QSpacerItem *horizontalSpacer_3;
+    QLabel *label_4;
+    QSpacerItem *horizontalSpacer_4;
+    QWidget *widget_6;
+    QHBoxLayout *horizontalLayout_4;
+    QSpacerItem *horizontalSpacer_5;
+    QWidget *widget_7;
+    QGridLayout *gridLayout_2;
+    QLabel *label_5;
+    QLineEdit *lineEdit_3;
+    QLabel *label_6;
+    QLineEdit *lineEdit_4;
+    QSpacerItem *horizontalSpacer_6;
+    QPushButton *pushButton_3;
 
     void setupUi(QDialog *Login)
     {
@@ -158,6 +174,67 @@ public:
         stackedWidget->addWidget(reg_page);
         set_page = new QWidget();
         set_page->setObjectName(QStringLiteral("set_page"));
+        widget_5 = new QWidget(set_page);
+        widget_5->setObjectName(QStringLiteral("widget_5"));
+        widget_5->setGeometry(QRect(260, 60, 191, 41));
+        horizontalLayout_3 = new QHBoxLayout(widget_5);
+        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_3);
+
+        label_4 = new QLabel(widget_5);
+        label_4->setObjectName(QStringLiteral("label_4"));
+
+        horizontalLayout_3->addWidget(label_4);
+
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_4);
+
+        widget_6 = new QWidget(set_page);
+        widget_6->setObjectName(QStringLiteral("widget_6"));
+        widget_6->setGeometry(QRect(190, 210, 327, 92));
+        horizontalLayout_4 = new QHBoxLayout(widget_6);
+        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_5);
+
+        widget_7 = new QWidget(widget_6);
+        widget_7->setObjectName(QStringLiteral("widget_7"));
+        gridLayout_2 = new QGridLayout(widget_7);
+        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
+        label_5 = new QLabel(widget_7);
+        label_5->setObjectName(QStringLiteral("label_5"));
+
+        gridLayout_2->addWidget(label_5, 0, 0, 1, 1);
+
+        lineEdit_3 = new QLineEdit(widget_7);
+        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
+
+        gridLayout_2->addWidget(lineEdit_3, 0, 1, 1, 1);
+
+        label_6 = new QLabel(widget_7);
+        label_6->setObjectName(QStringLiteral("label_6"));
+
+        gridLayout_2->addWidget(label_6, 1, 0, 1, 1);
+
+        lineEdit_4 = new QLineEdit(widget_7);
+        lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
+
+        gridLayout_2->addWidget(lineEdit_4, 1, 1, 1, 1);
+
+
+        horizontalLayout_4->addWidget(widget_7);
+
+        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_6);
+
+        pushButton_3 = new QPushButton(set_page);
+        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+        pushButton_3->setGeometry(QRect(280, 410, 121, 31));
         stackedWidget->addWidget(set_page);
 
         verticalLayout->addWidget(stackedWidget);
@@ -177,6 +254,10 @@ public:
         checkBox->setText(QApplication::translate("Login", "\350\256\260\344\275\217\345\257\206\347\240\201", 0));
         pushButton->setText(QApplication::translate("Login", "\346\262\241\346\234\211\350\264\246\345\217\267\357\274\214\351\251\254\344\270\212\346\263\250\345\206\214", 0));
         pushButton_2->setText(QApplication::translate("Login", "\347\231\273\345\275\225", 0));
+        label_4->setText(QApplication::translate("Login", "\346\234\215\345\212\241\345\231\250\350\256\276\347\275\256", 0));
+        label_5->setText(QApplication::translate("Login", "\346\234\215\345\212\241\345\231\250\345\234\260\345\235\200:", 0));
+        label_6->setText(QApplication::translate("Login", "\346\234\215\345\212\241\345\231\250\347\253\257\345\217\243:", 0));
+        pushButton_3->setText(QApplication::translate("Login", "\347\241\256\345\256\232", 0));
     } // retranslateUi
 
 };
