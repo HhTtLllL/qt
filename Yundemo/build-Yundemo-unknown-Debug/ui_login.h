@@ -87,9 +87,9 @@ public:
     QWidget *widget_7;
     QGridLayout *gridLayout_2;
     QLabel *label_5;
-    QLineEdit *lineEdit_3;
+    QLineEdit *address;
     QLabel *label_6;
-    QLineEdit *lineEdit_4;
+    QLineEdit *port;
     QSpacerItem *horizontalSpacer_6;
     QPushButton *pushButton_3;
 
@@ -316,20 +316,20 @@ public:
 
         gridLayout_2->addWidget(label_5, 0, 0, 1, 1);
 
-        lineEdit_3 = new QLineEdit(widget_7);
-        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
+        address = new QLineEdit(widget_7);
+        address->setObjectName(QStringLiteral("address"));
 
-        gridLayout_2->addWidget(lineEdit_3, 0, 1, 1, 1);
+        gridLayout_2->addWidget(address, 0, 1, 1, 1);
 
         label_6 = new QLabel(widget_7);
         label_6->setObjectName(QStringLiteral("label_6"));
 
         gridLayout_2->addWidget(label_6, 1, 0, 1, 1);
 
-        lineEdit_4 = new QLineEdit(widget_7);
-        lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
+        port = new QLineEdit(widget_7);
+        port->setObjectName(QStringLiteral("port"));
 
-        gridLayout_2->addWidget(lineEdit_4, 1, 1, 1, 1);
+        gridLayout_2->addWidget(port, 1, 1, 1, 1);
 
 
         horizontalLayout_4->addWidget(widget_7);
@@ -345,8 +345,25 @@ public:
 
         verticalLayout->addWidget(stackedWidget);
 
+        QWidget::setTabOrder(lineEdit, lineEdit_2);
+        QWidget::setTabOrder(lineEdit_2, checkBox);
+        QWidget::setTabOrder(checkBox, pushButton);
+        QWidget::setTabOrder(pushButton, pushButton_2);
+        QWidget::setTabOrder(pushButton_2, lineEdit_5);
+        QWidget::setTabOrder(lineEdit_5, lineEdit_6);
+        QWidget::setTabOrder(lineEdit_6, lineEdit_7);
+        QWidget::setTabOrder(lineEdit_7, lineEdit_8);
+        QWidget::setTabOrder(lineEdit_8, lineEdit_9);
+        QWidget::setTabOrder(lineEdit_9, lineEdit_10);
+        QWidget::setTabOrder(lineEdit_10, pushButton_4);
+        QWidget::setTabOrder(pushButton_4, address);
+        QWidget::setTabOrder(address, port);
+        QWidget::setTabOrder(port, pushButton_3);
 
         retranslateUi(Login);
+
+        stackedWidget->setCurrentIndex(1);
+
 
         QMetaObject::connectSlotsByName(Login);
     } // setupUi

@@ -28,12 +28,16 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     login.cpp \
-    titlewg.cpp
+    titlewg.cpp \
+    common/common.cpp \
+    common/des.c
 
 HEADERS += \
         mainwindow.h \
     login.h \
-    titlewg.h
+    titlewg.h \
+    common/des.h \
+    common/common.h
 
 FORMS += \
         mainwindow.ui \
