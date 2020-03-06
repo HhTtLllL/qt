@@ -64,16 +64,16 @@ public:
     QGridLayout *gridLayout_3;
     QLabel *label_8;
     QLabel *label_9;
-    QLineEdit *lineEdit_6;
+    QLineEdit *nickname;
     QLabel *label_10;
-    QLineEdit *lineEdit_7;
+    QLineEdit *pwd;
     QLabel *label_11;
-    QLineEdit *lineEdit_8;
+    QLineEdit *pwdAgain;
     QLabel *label_12;
-    QLineEdit *lineEdit_9;
+    QLineEdit *phone;
     QLabel *label_13;
-    QLineEdit *lineEdit_10;
-    QLineEdit *lineEdit_5;
+    QLineEdit *email;
+    QLineEdit *username;
     QPushButton *pushButton_4;
     QWidget *set_page;
     QWidget *widget_5;
@@ -224,55 +224,55 @@ public:
 
         gridLayout_3->addWidget(label_9, 1, 0, 1, 1);
 
-        lineEdit_6 = new QLineEdit(widget_9);
-        lineEdit_6->setObjectName(QStringLiteral("lineEdit_6"));
+        nickname = new QLineEdit(widget_9);
+        nickname->setObjectName(QStringLiteral("nickname"));
 
-        gridLayout_3->addWidget(lineEdit_6, 1, 1, 1, 2);
+        gridLayout_3->addWidget(nickname, 1, 1, 1, 2);
 
         label_10 = new QLabel(widget_9);
         label_10->setObjectName(QStringLiteral("label_10"));
 
         gridLayout_3->addWidget(label_10, 2, 0, 1, 1);
 
-        lineEdit_7 = new QLineEdit(widget_9);
-        lineEdit_7->setObjectName(QStringLiteral("lineEdit_7"));
+        pwd = new QLineEdit(widget_9);
+        pwd->setObjectName(QStringLiteral("pwd"));
 
-        gridLayout_3->addWidget(lineEdit_7, 2, 1, 1, 2);
+        gridLayout_3->addWidget(pwd, 2, 1, 1, 2);
 
         label_11 = new QLabel(widget_9);
         label_11->setObjectName(QStringLiteral("label_11"));
 
         gridLayout_3->addWidget(label_11, 3, 0, 1, 2);
 
-        lineEdit_8 = new QLineEdit(widget_9);
-        lineEdit_8->setObjectName(QStringLiteral("lineEdit_8"));
+        pwdAgain = new QLineEdit(widget_9);
+        pwdAgain->setObjectName(QStringLiteral("pwdAgain"));
 
-        gridLayout_3->addWidget(lineEdit_8, 3, 2, 1, 1);
+        gridLayout_3->addWidget(pwdAgain, 3, 2, 1, 1);
 
         label_12 = new QLabel(widget_9);
         label_12->setObjectName(QStringLiteral("label_12"));
 
         gridLayout_3->addWidget(label_12, 4, 0, 1, 1);
 
-        lineEdit_9 = new QLineEdit(widget_9);
-        lineEdit_9->setObjectName(QStringLiteral("lineEdit_9"));
+        phone = new QLineEdit(widget_9);
+        phone->setObjectName(QStringLiteral("phone"));
 
-        gridLayout_3->addWidget(lineEdit_9, 4, 2, 1, 1);
+        gridLayout_3->addWidget(phone, 4, 2, 1, 1);
 
         label_13 = new QLabel(widget_9);
         label_13->setObjectName(QStringLiteral("label_13"));
 
         gridLayout_3->addWidget(label_13, 5, 0, 1, 1);
 
-        lineEdit_10 = new QLineEdit(widget_9);
-        lineEdit_10->setObjectName(QStringLiteral("lineEdit_10"));
+        email = new QLineEdit(widget_9);
+        email->setObjectName(QStringLiteral("email"));
 
-        gridLayout_3->addWidget(lineEdit_10, 5, 1, 1, 2);
+        gridLayout_3->addWidget(email, 5, 1, 1, 2);
 
-        lineEdit_5 = new QLineEdit(widget_9);
-        lineEdit_5->setObjectName(QStringLiteral("lineEdit_5"));
+        username = new QLineEdit(widget_9);
+        username->setObjectName(QStringLiteral("username"));
 
-        gridLayout_3->addWidget(lineEdit_5, 0, 1, 1, 2);
+        gridLayout_3->addWidget(username, 0, 1, 1, 2);
 
         pushButton_4 = new QPushButton(reg_page);
         pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
@@ -349,13 +349,13 @@ public:
         QWidget::setTabOrder(lineEdit_2, checkBox);
         QWidget::setTabOrder(checkBox, pushButton);
         QWidget::setTabOrder(pushButton, pushButton_2);
-        QWidget::setTabOrder(pushButton_2, lineEdit_5);
-        QWidget::setTabOrder(lineEdit_5, lineEdit_6);
-        QWidget::setTabOrder(lineEdit_6, lineEdit_7);
-        QWidget::setTabOrder(lineEdit_7, lineEdit_8);
-        QWidget::setTabOrder(lineEdit_8, lineEdit_9);
-        QWidget::setTabOrder(lineEdit_9, lineEdit_10);
-        QWidget::setTabOrder(lineEdit_10, pushButton_4);
+        QWidget::setTabOrder(pushButton_2, username);
+        QWidget::setTabOrder(username, nickname);
+        QWidget::setTabOrder(nickname, pwd);
+        QWidget::setTabOrder(pwd, pwdAgain);
+        QWidget::setTabOrder(pwdAgain, phone);
+        QWidget::setTabOrder(phone, email);
+        QWidget::setTabOrder(email, pushButton_4);
         QWidget::setTabOrder(pushButton_4, address);
         QWidget::setTabOrder(address, port);
         QWidget::setTabOrder(port, pushButton_3);

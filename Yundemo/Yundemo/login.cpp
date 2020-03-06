@@ -7,6 +7,9 @@
 #include <QJsonValue>
 #include <QFile>
 #include <QMessageBox>
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QNetworkReply>
 
 //绘图头文件
 #include <QPainter>
@@ -73,9 +76,80 @@ void Login::paintEvent(QPaintEvent *event)
     p.drawPixmap(0,0,this->width(),this->height(),pixmap);
 }
 
-
+//注册按钮
 void Login::on_pushButton_4_clicked()
 {
+    //取数据->控件的
+    QString ip = ui->address->text();
+    QString port = ui->port->text();
+    QString username = ui->username->text();
+    QString nickname = ui->nickname->text();
+    QString pwd = ui->pwd->text();
+    QString phone = ui->phone->text();
+    QString email = ui->email->text();
+
+    //校验
+
+    //将数据发往数据库,需要直到发给server什么样的数据
+    //将用户输入的注册信息转化为 一个 json对象
+
+    QByteArray postData = getRegJson(username,nickname,pwd,phone,email);
+
+
+    //准备发送http的请求协议
+    //需要network 的三个类
+    QNetworkAccessManager* manager =new  QNetworkAccessManager(this);
+    //http 请求协议头
+    QNetworkRequest request;
+                                                          //post 提交数据的四中方式之一
+    request.setHeader(QNetworkRequest::ContentTypeHeader,"application/json");
+    //发送字节数
+    request.setHeader(QNetworkRequest::ContentLengthHeader,postData.size());
+    //发送 url
+
+    //从配置文件中读出来, %1,%2 为占位符
+    QString url = QString("http://%1:%2/reg").arg(ip).arg(port);//格式化一个字符串
+    //设置url
+    request.setUrl(QUrl(url));
+
+    //发送
+    QNetworkReply* reply =  manager->post(request,postData);
+
+    //接受server 端返回的数据
+    // post 会返回之歌QnetworkReply 对象
+
+    connect(reply,&QNetworkReply::readyRead,[=](){
+       //读服务器返回的数据
+        //成功 {"code":"001"}
+        QByteArray jsonData = reply->readAll();
+        //将字符串转化为 json 对象
+        QJsonDocument doc = QJsonDocument::fromJson(jsonData);
+        //判读这个是不是一个json文档
+        if(!doc.isObject())
+        {
+            //如果不是一个json文档 退出
+            return ;
+        }
+
+        QJsonObject obj = doc.object();
+
+        QString status = obj.value("code").toString();
+
+        //解析json字符串
+        //得到一个 QString status
+
+        if("002" == status)
+        {
+            //success
+        }
+        else if("003" == status)
+        {
+            //用户已存在
+        }
+        else {
+            //失败
+        }
+    });
 
 }
 //服务器设置
@@ -119,6 +193,7 @@ void Login::on_pushButton_3_clicked()
 }
 
 //保存到配置文件
+//common.h  --writewebinfo
 void Login::saveWebInfo(QString ip, QString port, QString path)
 {
     //先读文件 ,读path
@@ -188,13 +263,24 @@ void Login::saveWebInfo(QString ip, QString port, QString path)
     //写文件
 
 
+}
 
+QByteArray Login::getRegJson(QString username, QString nickname,QString pwd, QString phone, QString mail)
+{
+    //将这些数据都插入json对象中,然后将json对象转化为 json文档,然后在tojson 变成 QByteArray
+    QMap<QString,QVariant> jsondata;
+    jsondata.insert("userName",username);
+    jsondata.insert("nickName",nickname);
+    jsondata.insert("pwd",pwd);
+    jsondata.insert("phone",phone);
+    jsondata.insert("email",mail);
 
+    //将map打包为json
 
+    QJsonDocument doc = QJsonDocument::fromVariant(jsondata);
 
+    QByteArray data = doc.toJson();
 
-
-
-
+    return data;
 
 }

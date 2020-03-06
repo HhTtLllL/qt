@@ -241,7 +241,7 @@ void Common::writeLoginInfo(QString user, QString pwd, bool isRemeber, QString p
 // 服务器信息，写入配置文件
 void Common::writeWebInfo(QString ip, QString port, QString path)
 {
-    // web_server信息
+    // web_server信息,存储了一个web map
     QMap<QString, QVariant> web_server;
     web_server.insert("ip", ip);
     web_server.insert("port", port);

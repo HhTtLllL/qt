@@ -226,7 +226,7 @@
          </widget>
         </item>
         <item row="1" column="1" colspan="2">
-         <widget class="QLineEdit" name="lineEdit_6"/>
+         <widget class="QLineEdit" name="nickname"/>
         </item>
         <item row="2" column="0">
          <widget class="QLabel" name="label_10">
@@ -236,7 +236,7 @@
          </widget>
         </item>
         <item row="2" column="1" colspan="2">
-         <widget class="QLineEdit" name="lineEdit_7"/>
+         <widget class="QLineEdit" name="pwd"/>
         </item>
         <item row="3" column="0" colspan="2">
          <widget class="QLabel" name="label_11">
@@ -246,7 +246,7 @@
          </widget>
         </item>
         <item row="3" column="2">
-         <widget class="QLineEdit" name="lineEdit_8"/>
+         <widget class="QLineEdit" name="pwdAgain"/>
         </item>
         <item row="4" column="0">
          <widget class="QLabel" name="label_12">
@@ -256,7 +256,7 @@
          </widget>
         </item>
         <item row="4" column="2">
-         <widget class="QLineEdit" name="lineEdit_9"/>
+         <widget class="QLineEdit" name="phone"/>
         </item>
         <item row="5" column="0">
          <widget class="QLabel" name="label_13">
@@ -266,10 +266,10 @@
          </widget>
         </item>
         <item row="5" column="1" colspan="2">
-         <widget class="QLineEdit" name="lineEdit_10"/>
+         <widget class="QLineEdit" name="email"/>
         </item>
         <item row="0" column="1" colspan="2">
-         <widget class="QLineEdit" name="lineEdit_5"/>
+         <widget class="QLineEdit" name="username"/>
         </item>
        </layout>
       </widget>
@@ -429,12 +429,12 @@
   <tabstop>checkBox</tabstop>
   <tabstop>pushButton</tabstop>
   <tabstop>pushButton_2</tabstop>
-  <tabstop>lineEdit_5</tabstop>
-  <tabstop>lineEdit_6</tabstop>
-  <tabstop>lineEdit_7</tabstop>
-  <tabstop>lineEdit_8</tabstop>
-  <tabstop>lineEdit_9</tabstop>
-  <tabstop>lineEdit_10</tabstop>
+  <tabstop>username</tabstop>
+  <tabstop>nickname</tabstop>
+  <tabstop>pwd</tabstop>
+  <tabstop>pwdAgain</tabstop>
+  <tabstop>phone</tabstop>
+  <tabstop>email</tabstop>
   <tabstop>pushButton_4</tabstop>
   <tabstop>address</tabstop>
   <tabstop>port</tabstop>
