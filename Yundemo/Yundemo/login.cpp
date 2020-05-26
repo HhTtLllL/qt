@@ -1,6 +1,6 @@
 #include "login.h"
 #include "ui_login.h"
-#include "./common/common.h"
+
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonArray>
@@ -69,6 +69,7 @@ Login::~Login()
 //paintEvent 是一个回调函数，给控件设背景时 ，重写这个函数就ok
 void Login::paintEvent(QPaintEvent *event)
 {
+    Q_UNUSED(event);
     //给窗口画 背景图
     // p 为绘图设备， 在this 上画图
     QPainter p(this);
@@ -76,15 +77,20 @@ void Login::paintEvent(QPaintEvent *event)
     p.drawPixmap(0,0,this->width(),this->height(),pixmap);
 }
 
+
+
 //注册按钮
 void Login::on_pushButton_4_clicked()
 {
     //取数据->控件的
     QString ip = ui->address->text();
     QString port = ui->port->text();
+
+    //注册
     QString username = ui->username->text();
     QString nickname = ui->nickname->text();
     QString pwd = ui->pwd->text();
+    QString cinfirm_pwd = ui->pwdAgain->text();
     QString phone = ui->phone->text();
     QString email = ui->email->text();
 
@@ -106,7 +112,6 @@ void Login::on_pushButton_4_clicked()
     //发送字节数
     request.setHeader(QNetworkRequest::ContentLengthHeader,postData.size());
     //发送 url
-
     //从配置文件中读出来, %1,%2 为占位符
     QString url = QString("http://%1:%2/reg").arg(ip).arg(port);//格式化一个字符串
     //设置url
@@ -141,13 +146,21 @@ void Login::on_pushButton_4_clicked()
         if("002" == status)
         {
             //success
+            //将当前注册的用户信息填写到登录的数据框中
+            ui->user_login->setText(username);
+            ui->passwd_login->setText(pwd);
+            //当前注册信息清除
+            //跳转到登录页面
+            ui->stackedWidget->setCurrentWidget(ui->login_page);
         }
         else if("003" == status)
         {
             //用户已存在
+            QMessageBox::warning(this,"警告","当前用户存在");
         }
         else {
             //失败
+            QMessageBox::critical(this,"失败","注册失败");
         }
     });
 
@@ -268,16 +281,16 @@ void Login::saveWebInfo(QString ip, QString port, QString path)
 QByteArray Login::getRegJson(QString username, QString nickname,QString pwd, QString phone, QString mail)
 {
     //将这些数据都插入json对象中,然后将json对象转化为 json文档,然后在tojson 变成 QByteArray
-    QMap<QString,QVariant> jsondata;
+    QJsonObject jsondata;
     jsondata.insert("userName",username);
     jsondata.insert("nickName",nickname);
-    jsondata.insert("pwd",pwd);
+    jsondata.insert("firstPwd",pwd);
     jsondata.insert("phone",phone);
     jsondata.insert("email",mail);
 
     //将map打包为json
 
-    QJsonDocument doc = QJsonDocument::fromVariant(jsondata);
+    QJsonDocument doc = QJsonDocument(jsondata);
 
     QByteArray data = doc.toJson();
 

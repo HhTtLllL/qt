@@ -2,6 +2,7 @@
 #define LOGIN_H
 
 #include <QDialog>
+#include "./common/common.h"
 
 namespace Ui {
 class Login;
@@ -31,6 +32,7 @@ private slots:  //槽函数
     //初始化登录界面的函数  --从配置文件读信息
 private:
     Ui::Login *ui;
+    Common m_cm;
 };
 
 #endif // LOGIN_H

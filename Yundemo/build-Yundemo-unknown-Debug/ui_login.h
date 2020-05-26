@@ -42,8 +42,8 @@ public:
     QWidget *widget_2;
     QGridLayout *gridLayout;
     QLabel *label_2;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
+    QLineEdit *user_login;
+    QLineEdit *passwd_login;
     QLabel *label_3;
     QWidget *widget_3;
     QHBoxLayout *horizontalLayout_2;
@@ -130,15 +130,15 @@ public:
 
         gridLayout->addWidget(label_2, 0, 0, 1, 1);
 
-        lineEdit = new QLineEdit(widget_2);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        user_login = new QLineEdit(widget_2);
+        user_login->setObjectName(QStringLiteral("user_login"));
 
-        gridLayout->addWidget(lineEdit, 0, 1, 1, 1);
+        gridLayout->addWidget(user_login, 0, 1, 1, 1);
 
-        lineEdit_2 = new QLineEdit(widget_2);
-        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
+        passwd_login = new QLineEdit(widget_2);
+        passwd_login->setObjectName(QStringLiteral("passwd_login"));
 
-        gridLayout->addWidget(lineEdit_2, 1, 1, 1, 1);
+        gridLayout->addWidget(passwd_login, 1, 1, 1, 1);
 
         label_3 = new QLabel(widget_2);
         label_3->setObjectName(QStringLiteral("label_3"));
@@ -345,8 +345,8 @@ public:
 
         verticalLayout->addWidget(stackedWidget);
 
-        QWidget::setTabOrder(lineEdit, lineEdit_2);
-        QWidget::setTabOrder(lineEdit_2, checkBox);
+        QWidget::setTabOrder(user_login, passwd_login);
+        QWidget::setTabOrder(passwd_login, checkBox);
         QWidget::setTabOrder(checkBox, pushButton);
         QWidget::setTabOrder(pushButton, pushButton_2);
         QWidget::setTabOrder(pushButton_2, username);
