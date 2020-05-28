@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.8.0, 2020-05-28T14:30:07. -->
+<!-- Written by QtCreator 4.8.0, 2020-05-29T00:26:13. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -54,10 +54,7 @@
  </data>
  <data>
   <variable>ProjectExplorer.Project.PluginSettings</variable>
-  <valuemap type="QVariantMap">
-   <valuelist type="QVariantList" key="ClangCodeModel.CustomCommandLineKey"/>
-   <value type="bool" key="ClangCodeModel.UseGlobalConfig">true</value>
-  </valuemap>
+  <valuemap type="QVariantMap"/>
  </data>
  <data>
   <variable>ProjectExplorer.Project.Target.0</variable>
@@ -69,7 +66,7 @@
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/tt/qt/TCP/build-TCP-unknown-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/tt/qt/build-Menu-unknown-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -125,7 +122,7 @@
     <value type="bool" key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild">true</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/tt/qt/TCP/build-TCP-unknown-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/tt/qt/build-Menu-unknown-Release</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -181,7 +178,7 @@
     <value type="bool" key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild">true</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.2">
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/tt/qt/TCP/build-TCP-unknown-Profile</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/tt/qt/build-Menu-unknown-Profile</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -293,20 +290,19 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">TCP</value>
+    <value type="QString" key="ProjectExplorer.CustomExecutableRunConfiguration.Executable"></value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Custom Executable</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/tt/qt/TCP/TCP/TCP.pro</value>
-    <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.ProFile">TCP.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">ProjectExplorer.CustomExecutableRunConfiguration</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
-    <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
     <value type="bool" key="RunConfiguration.UseMultiProcess">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
     <value type="QString" key="RunConfiguration.WorkingDirectory"></value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">/home/tt/qt/TCP/build-TCP-unknown-Debug</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default"></value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">1</value>
   </valuemap>

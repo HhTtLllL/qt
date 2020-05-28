@@ -2,6 +2,7 @@
 #include "ui_clientwidget.h"
 #include <QHostAddress>
 
+//构造函数
 ClientWidget::ClientWidget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ClientWidget)
@@ -12,7 +13,7 @@ ClientWidget::ClientWidget(QWidget *parent) :
 
 
     setWindowTitle("客户端");
-    tcpSocket = NULL;
+    tcpSocket = nullptr;
 
     //分配空间,指定父对象
     tcpSocket = new QTcpSocket(this);
@@ -62,9 +63,6 @@ void ClientWidget::on_buttonSend_clicked()
 
     //发送数据
     tcpSocket->write(str.toUtf8().data());
-
-
-
 }
 
 void ClientWidget::on_buttonClose_clicked()

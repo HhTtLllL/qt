@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2020-02-26T00:10:16
+# Project created by QtCreator 2020-05-29T00:26:11
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = qq
+TARGET = Menu
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -26,15 +26,13 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp \
-    tcpserver.cpp
+        mainmenu.cpp
 
 HEADERS += \
-        mainwindow.h \
-    tcpserver.h
+        mainmenu.h
 
 FORMS += \
-        mainwindow.ui
+        mainmenu.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
